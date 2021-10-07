@@ -4,7 +4,7 @@ This is the social web blog for everyone. You can post your images and messages 
 
 ## Getting Started
 
-You'll need to fill .env file in the root of this repo. Pick the Django secret-key. Then write posgres name, user and password. After those steps you can start docker-compose file and the project will be started automatically
+You'll need to fill .env file in the root of this repo. Pick the Django secret-key. Then write posgres name, user and password (for example it might be "postgres" for listed rows). After those steps you can start docker-compose file and the project will be started automatically
 
 #
 
