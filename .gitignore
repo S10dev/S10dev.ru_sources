@@ -18,6 +18,5 @@ __pycache__/
 yatube/static/admin
 yatube/static/debug_toolbar
 posts/static/
-media/
 
 db.sqlite3

@@ -4,8 +4,9 @@ This is the social web blog for everyone. You can post your images and messages 
 
 ## Getting Started
 
-You'll need to fill .env file in the root of this repo. Pick the Django secret-key. Then write posgres name, user and password (for example it might be "postgres" for listed rows). After those steps you can start docker-compose file and the project will be started automatically
+First of all you're need to fill ./yatube/yatube/.env file. Pick the Django secret-key. Then write postgres name, user and password (for example it might be "postgres" for listed rows). After those steps you can start docker-compose file and the project will be started automatically
 
+If you need to use some fixtures, unbox folder named "fixtures" right into the ./yatube directory. After this delete "#" in ./yatube/entrypoint.sh in 5th line. Now you can build docker-compose and enjoy my prepared test posts :) (by the way after installing fixtures you can login as s10;123 as administrator)
 #
 
 
