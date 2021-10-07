@@ -10,7 +10,7 @@ services:
   db:
     image: postgres:12.4
     env_file:
-      - ./yatube/yatube/.env
+      - ./.env
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     ports:
