@@ -1,6 +1,6 @@
-# Project Title
+# Social web blog
 
-This is the social web. You can post your images and messages here. Write comments under the posts, subscribe to autor and etc.
+This is the social web blog for everyone. You can post your images and messages here. Write comments under the posts, subscribe to autor and etc.
 
 ## Getting Started
 
@@ -8,9 +8,6 @@ You'll need to fill .env file in the root of this repo. Pick the Django secret-k
 
 #
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
