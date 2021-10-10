@@ -4,9 +4,9 @@ This is the social web blog for everyone. You can post your images and messages 
 
 ## Getting Started
 
-First of all you're need to fill ./yatube/yatube/.env file. Pick the Django secret-key. Then write postgres name, user and password (by default it filled some default parameters). After those steps you can start docker-compose file and the project will be started automatically
+To get started you could run "init-letsencrypt.sh". Script would install ssl certificate and run docker-compose automatically.
 
-If you need to install my fixtures, just run load_fixtures.sh script while you have your docker-compose up (by the way after installing fixtures you can login as s10;123 as administrator)
+If you need to install my fixtures, just run "load_fixtures.sh" script while you have your docker-compose up (by the way after installing fixtures you can login s10;123 as administrator)
 #
 
 
