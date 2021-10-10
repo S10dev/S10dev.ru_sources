@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.flatpages import views
-from django.conf.urls import handler404
 from django.conf.urls.static import static
 from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,11 +27,13 @@ urlpatterns = [
     path('about/', include('django.contrib.flatpages.urls')),
 ]
 
-handler404 = "posts.views.page_not_found" # noqa
-handler500 = "posts.views.server_error" # noqa
+handler404 = "posts.views.page_not_found"
+handler500 = "posts.views.server_error"
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+        )
+    urlpatterns += static(
+        settings.STATIC_URL, document_root=settings.STATIC_ROOT
+        )

@@ -4,7 +4,7 @@ This is the social web blog for everyone. You can post your images and messages 
 
 ## Getting Started
 
-To get started you could run "init-letsencrypt.sh". Script would install ssl certificate and run docker-compose automatically.
+To get started you could run the "docker-compose up" command.
 
 If you need to install my fixtures, just run "load_fixtures.sh" script while you have your docker-compose up (by the way after installing fixtures you can login s10;123 as administrator)
 #

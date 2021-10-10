@@ -7,9 +7,9 @@
 {% if author == user %}
 <div class="h4">
     {% if img %}
-    <a href ="{% url 'get_avatar' author.username %}">Изменить авку</a>
+    <a href ="{% url 'upload_avatar' author.username %}">Изменить авку</a>
     {% else %}
-    <a href ="{% url 'get_avatar' author.username %}">Добавить авку</a>
+    <a href ="{% url 'upload_avatar' author.username %}">Добавить авку</a>
     {% endif %}
 </div>
 {% endif %}

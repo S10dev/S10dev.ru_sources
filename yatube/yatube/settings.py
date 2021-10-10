@@ -11,11 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 
-from pathlib import Path
 import os
-from django.urls import reverse
 from dotenv import load_dotenv
 load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'localhost', 'www.s10dev.ru', 's10dev.ru', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', 'www.s10dev.ru', 's10dev.ru', '127.0.0.1']
 
 # Application definition
 
@@ -129,11 +128,8 @@ USE_L10N = True
 USE_TZ = True
 
 LOGIN_URL = "/auth/login/"
-LOGIN_REDIRECT_URL = "index" 
+LOGIN_REDIRECT_URL = "index"
 LOGOUT_REDIRECT_URL = "index"
-
-
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

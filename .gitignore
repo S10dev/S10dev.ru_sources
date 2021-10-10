@@ -4,7 +4,7 @@ venv/
 .venv
 .venv/
 data/
-
+yatube/media/
 __pycache__/
 *.py[cod]
 

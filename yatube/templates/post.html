@@ -5,38 +5,32 @@
 {% load thumbnail %}
 {% load user_filters %}
 <main role="main" class="container">
-                        {% include "post_item.html" with post=post full=True %}
-                               <h2>Комментарии:</h2>
-                                <br><br>
-                                {% for item in page %}
-                                <div class="card mb-3 mt-1 shadow-sm">
-                                {% load thumbnail %}
-                                {% thumbnail item.img "600x200" crop='noop' upscale=True as im %}
-                                    <img class="card-img" src="{{ im.url }}" >
-                                {% endthumbnail %}
-                                    <div class="card-body">
-                                <div class="media mb-4">
-                                <div class="media-body">
-                                <h5 class="mt-0">
-                                <a
-                                        href="{% url 'profile' item.author.username %}"
-                                        name="comment_{{ item.id }}"
-                                        >{{ item.author.username }}</a>
-                                </h5>
-                                {{ item.text }}
-                                </div>
-                                <small class="text-muted">{{ item.created }}</small>
-                                </div>
-                              </div>
-                                </div>
-                                {% endfor %}
-                                {% if page.has_other_pages %}
-                                {% include "paginator.html" with items=page paginator=paginator %}
-                                {% endif %}
+  {% include "post_item.html" with post=post full=True %}
+  <h2>Комментарии:</h2>
+  <br><br>
+  {% for item in page %}
+  <div class="card mb-3 mt-1 shadow-sm">
+    {% load thumbnail %}
+    {% thumbnail item.img "600x200" crop='noop' upscale=True as im %}
+    <img class="card-img" src="{{ im.url }}">
+    {% endthumbnail %}
+    <div class="card-body">
+      <div class="media mb-4">
+        <div class="media-body">
+            <h5 class="mt-0">
+              <a href="{% url 'profile' item.author.username %}" name="comment_{{ item.id }}">{{ item.author.username }}</a>
+            </h5>
+          {{ item.text }}
+        </div>
+        <small class="text-muted">{{ item.created }}</small>
+      </div>
+    </div>
+  </div>
+      {% endfor %}
+      {% if page.has_other_pages %}
+      {% include "paginator.html" with items=page paginator=paginator %}
+      {% endif %}
 
-                                {% include 'comments.html' with form=form %}
-                        </div>
-                        
-                </div>
+      {% include 'comments.html' with form=form %}
 </main>
 {% endblock %}
