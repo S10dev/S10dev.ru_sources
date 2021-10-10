@@ -23,8 +23,6 @@ services:
     volumes:
       - static:/app/static/
       - media:/app/media/
-    ports:
-      - "8000:8000"
 
   nginx:
     image: nginx
